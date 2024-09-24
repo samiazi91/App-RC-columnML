@@ -8,7 +8,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.neural_network import MLPClassifier
 st.title('Method Of Repair Prediction for RC Columns')
 algorithm= st.radio('ML algorithm:', ['CatBoost-Scenario VI','CatBoost-Scenario VII','Gradient Boost-Scenario X','MLP-Scenario VI','MLP-Scenario VII','MLP-Scenario X'])
-df = pd.read_csv('https://drive.google.com/file/d/1CgUDJ-HGvdYrm0EYsykVMeZ0Ay0B04yo/view?usp=drive_link', index_col=[])
+df = pd.read_csv('dataCol.csv', index_col=[])
 data=df.head(422)
 y = data["DS"]
 
