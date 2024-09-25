@@ -10,7 +10,8 @@ st.title('Method Of Repair Prediction for RC Columns')
 algorithm= st.radio('ML algorithm:', ['CatBoost-Scenario VI','CatBoost-Scenario VII','Gradient Boost-Scenario X','MLP-Scenario VI','MLP-Scenario VII','MLP-Scenario X'])
 url='https://drive.google.com/file/d/1CgUDJ-HGvdYrm0EYsykVMeZ0Ay0B04yo/view?usp=sharing'
 url='https://drive.google.com/uc?id=' + url.split('/')[-2]
-df = pd.read_csv(url)data=df.head(422)
+df = pd.read_csv(url)
+data=df.head(422)
 y = data["DS"]
 
 def predictionCBVI (Aspect_Ratio, PF,HF):
