@@ -115,7 +115,7 @@ elif algorithm=='MLP-Scenario VI':
      Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
      PF =st.number_input("Percolation feature")
      HF = st.number_input("Heterogeneity feature")
-     yy=predictionMLPVI([Aspect_Ratio, PF,HF])
+     yy=predictionMLPVI(Aspect_Ratio, PF,HF)
 elif algorithm=='MLP-Scenario VII':
          Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
          PF =st.number_input("Percolation feature")
@@ -123,7 +123,7 @@ elif algorithm=='MLP-Scenario VII':
          R_1 = st.number_input("R_1")
          R0 = st.number_input("R0")
          R1 = st.number_input("R+1")
-         yy=predictionMLPVII([Aspect_Ratio, PF,HF, R_1, R0, R1])
+         yy=predictionMLPVII(Aspect_Ratio, PF,HF, R_1, R0, R1)
 else: 
       Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
       fc =st.number_input("Compressive strength of concrete (MPa)")
