@@ -64,12 +64,12 @@ def predictionMLPX (A):
 
 
 if algorithm=='CatBoost-Scenario VI':
-      Aspect_Ratio =st.number_input("Aspect Ratio__H/L")
+      Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
       PF =st.number_input("Percolation feature")
       HF = st.number_input("Heterogeneity feature")
       yy=predictionCBVI(Aspect_Ratio, PF,HF)
 elif algorithm=='CatBoost-Scenario VII':
-         Aspect_Ratio =st.number_input("Aspect Ratio__H/L")
+         Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
          PF =st.number_input("Percolation feature")
          HF = st.number_input("Heterogeneity feature")
          R_1 = st.number_input("R_1")
@@ -77,7 +77,7 @@ elif algorithm=='CatBoost-Scenario VII':
          R1 = st.number_input("R+1")
          yy=predictionCBVII(Aspect_Ratio, PF,HF, R_1, R0, R1)
 elif algorithm=='Gradient Boost-Scenario X':
-      Aspect_Ratio =st.number_input("Aspect Ratio__H/L")
+      Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
       fc =st.number_input("Compressive strength of concrete (MPa)")
       Fyl =st.number_input("Vertical rebar strength (MPa)")
       Fyv =st.number_input("Horizontal rebar strength (MPa)")
@@ -112,20 +112,20 @@ elif algorithm=='Gradient Boost-Scenario X':
       a=np.asarray([[Aspect_Ratio, fc, Fyl, Fyv, AL, AH, Av, S, Sc, HF, PF,R_10,R_9,R_8,R_7,R_6,R_5,R_4,R_3,R_2,R_1,R10,R9,R8,R7,R6,R5,R4,R3,R2,R1,R0]])
       yy=predictionGB(a)
 elif algorithm=='MLP-Scenario VI':
-     Aspect_Ratio =st.number_input("Aspect Ratio__H/L")
+     Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
      PF =st.number_input("Percolation feature")
      HF = st.number_input("Heterogeneity feature")
-     yy=predictionMLPVI(Aspect_Ratio, PF,HF)
+     yy=predictionMLPVI([Aspect_Ratio, PF,HF])
 elif algorithm=='MLP-Scenario VII':
-         Aspect_Ratio =st.number_input("Aspect Ratio__H/L")
+         Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
          PF =st.number_input("Percolation feature")
          HF = st.number_input("Heterogeneity feature")
          R_1 = st.number_input("R_1")
          R0 = st.number_input("R0")
          R1 = st.number_input("R+1")
-         yy=predictionMLPVII(Aspect_Ratio, PF,HF, R_1, R0, R1)
+         yy=predictionMLPVII([Aspect_Ratio, PF,HF, R_1, R0, R1])
 else: 
-      Aspect_Ratio =st.number_input("Aspect Ratio__H/L")
+      Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
       fc =st.number_input("Compressive strength of concrete (MPa)")
       Fyl =st.number_input("Vertical rebar strength (MPa)")
       Fyv =st.number_input("Horizontal rebar strength (MPa)")
