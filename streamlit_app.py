@@ -38,14 +38,6 @@ def predictionGB (A):
  predicted_y = GB.predict(A)
  return predicted_y
 
-
- X = data[['h/l', 'fc', 'rhov', 'rhoh', 'fyv', 'fyh', 'AL', 'BE', 'T2B', 'L2R', 'R2L', 'B2T', 'LC','-10','-9','-8','-7','-6','-5','-4','-3','-2','-1','10','9','8','7','6','5','4','3','2','1','0']]
- X_trainset, X_testset, y_trainset, y_testset = train_test_split(X, y, test_size=0.3, random_state=1, stratify= y)
- xgbModel = xgb.XGBClassifier(max_depth = 12, n_estimators = 150, colsample_bytree = 1,learning_rate = 0.1, min_child_weight = 1, reg_alpha = 0, reg_lambda = 1, subsample = 0.9)
- xgbModel.fit(X_trainset,y_trainset)
- predicted_y = xgbModel.predict(A)
- return predicted_y
-
 def predictionMLPVI (Aspect_Ratio, PF,HF):
  X1 = data[['H/B','pf', 'hf']]
  X_trainset, X_testset, y_trainset, y_testset = train_test_split(X1, y, test_size=0.3, random_state=1, stratify= y)
@@ -117,7 +109,7 @@ elif algorithm=='Gradient Boost-Scenario X':
       R8 = st.number_input("R+8")
       R9 = st.number_input("R+9")
       R10 = st.number_input("R+10")
-      a=np.asarray([[' Aspect_Ratio', 'fc', 'Fyl', 'Fyv', 'AL', 'AH', 'Av', 'S', 'Sc', 'HF', 'PF','R_10','R_9','R_8','R_7','R_6','R_5','R_4','R_3','R_2','R_1','R10','R9','R8','R7','R6','R5','R4','R3','R2','R1','R0']])
+      a=np.asarray([['Aspect_Ratio', 'fc', 'Fyl', 'Fyv', 'AL', 'AH', 'Av', 'S', 'Sc', 'HF', 'PF','R_10','R_9','R_8','R_7','R_6','R_5','R_4','R_3','R_2','R_1','R10','R9','R8','R7','R6','R5','R4','R3','R2','R1','R0']])
       yy=predictionGB(a)
 elif algorithm=='MLP-Scenario VI':
      Aspect_Ratio =st.number_input("Aspect Ratio__H/L")
