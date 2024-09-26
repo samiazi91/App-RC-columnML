@@ -157,7 +157,7 @@ else:
       R8 = st.number_input("R+8")
       R9 = st.number_input("R+9")
       R10 = st.number_input("R+10")
-      a=np.asarray([[' Aspect_Ratio', 'fc', 'Fyl', 'Fyv', 'AL', 'AH', 'Av', 'S', 'Sc', 'HF', 'PF','R_10','R_9','R_8','R_7','R_6','R_5','R_4','R_3','R_2','R_1','R10','R9','R8','R7','R6','R5','R4','R3','R2','R1','R0']])
+      a=np.asarray([['Aspect_Ratio', 'fc', 'Fyl', 'Fyv', 'AL', 'AH', 'Av', 'S', 'Sc', 'HF', 'PF','R_10','R_9','R_8','R_7','R_6','R_5','R_4','R_3','R_2','R_1','R10','R9','R8','R7','R6','R5','R4','R3','R2','R1','R0']])
       yy=predictionMLPX(a)
 
 
