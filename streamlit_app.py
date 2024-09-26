@@ -87,7 +87,7 @@ elif algorithm=='Gradient Boost-Scenario X':
       S =st.number_input("Spacing of transverse reinforcement")
       Sc =st.number_input("Spacing of transverse reinforcement in critical area")
       PF = st.number_input("Percolation feature")
-      PF = st.number_input("Heterogeneity feature")
+      HF = st.number_input("Heterogeneity feature")
       R_10 = st.number_input("R_10")
       R_9 = st.number_input("R_9")
       R_8 = st.number_input("R_8")
