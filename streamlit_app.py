@@ -42,7 +42,7 @@ def predictionMLPVI (Aspect_Ratio, PF,HF):
  X1 = data[['H/B','pf', 'hf']]
  X_trainset, X_testset, y_trainset, y_testset = train_test_split(X1, y, test_size=0.3, random_state=1, stratify= y)
  mlp = MLPClassifier(hidden_layer_sizes=(6,6,4), max_iter= 1000,activation= 'tanh',solver= 'lbfgs',alpha= 0.1,learning_rate= 'constant',verbose=10)
- mlp.fit(X_trainset, y_trainset)
+ mlp.fit(X_trainset.values, y_trainset)
  predicted_y = mlp.predict([[Aspect_Ratio, PF,HF]])
  return predicted_y
 
