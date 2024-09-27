@@ -43,7 +43,7 @@ def predictionMLPVI (Aspect_Ratio, PF,HF):
  X_trainset, X_testset, y_trainset, y_testset = train_test_split(X1, y, test_size=0.3, random_state=1, stratify= y)
  mlp = MLPClassifier(hidden_layer_sizes=(6,6,4), max_iter= 1000,activation= 'tanh',solver= 'lbfgs',alpha= 0.1,learning_rate= 'constant',verbose=10)
  mlp.fit(X_trainset, y_trainset)
- predicted_y = mlp.predict([Aspect_Ratio, PF,HF])
+ predicted_y = mlp.predict([[Aspect_Ratio, PF,HF]])
  return predicted_y
 
 def predictionMLPVII (Aspect_Ratio, PF,HF, R_1, R0, R1):
@@ -51,7 +51,7 @@ def predictionMLPVII (Aspect_Ratio, PF,HF, R_1, R0, R1):
  X_trainset, X_testset, y_trainset, y_testset = train_test_split(X1, y, test_size=0.3, random_state=1, stratify= y)
  mlp = MLPClassifier(hidden_layer_sizes=(5,5,8), max_iter= 1500,activation= 'tanh',solver= 'adam',alpha= 0.1,learning_rate= 'constant',verbose=10)
  mlp.fit(X_trainset, y_trainset)
- predicted_y = mlp.predict([Aspect_Ratio, PF,HF, R_1, R0, R1])
+ predicted_y = mlp.predict([[Aspect_Ratio, PF,HF, R_1, R0, R1]])
  return predicted_y
 
 def predictionMLPX (A):
@@ -67,7 +67,7 @@ if algorithm=='CatBoost-Scenario VI':
       Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
       PF =st.number_input("Percolation feature")
       HF = st.number_input("Heterogeneity feature")
-      yy=predictionMLPVI(Aspect_Ratio, PF,HF)
+      yy=predictionCBVI(Aspect_Ratio, PF,HF)
 elif algorithm=='CatBoost-Scenario VII':
          Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
          PF =st.number_input("Percolation feature")
