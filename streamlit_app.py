@@ -115,7 +115,7 @@ elif algorithm=='MLP-Scenario VI':
      Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
      PF =st.number_input("Percolation feature")
      HF = st.number_input("Heterogeneity feature")
-     yy=predictionMLPVI(np.array([Aspect_Ratio, PF,HF]).reshape(-1,1))
+     yy=predictionMLPVI(np.array([Aspect_Ratio, PF,HF]).reshape(1,-1))
 elif algorithm=='MLP-Scenario VII':
          Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
          PF =st.number_input("Percolation feature")
