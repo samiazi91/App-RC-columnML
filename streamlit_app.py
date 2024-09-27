@@ -67,7 +67,7 @@ if algorithm=='CatBoost-Scenario VI':
       Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
       PF =st.number_input("Percolation feature")
       HF = st.number_input("Heterogeneity feature")
-      yy=predictionCBVI(Aspect_Ratio, PF,HF)
+      yy=predictionMLPVI(Aspect_Ratio, PF,HF)
 elif algorithm=='CatBoost-Scenario VII':
          Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
          PF =st.number_input("Percolation feature")
@@ -115,7 +115,7 @@ elif algorithm=='MLP-Scenario VI':
      Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
      PF =st.number_input("Percolation feature")
      HF = st.number_input("Heterogeneity feature")
-     yy=predictionCBVI(Aspect_Ratio, PF,HF)
+     yy=predictionMLPVI(Aspect_Ratio, PF,HF)
 elif algorithm=='MLP-Scenario VII':
          Aspect_Ratio =st.number_input("Aspect Ratio__H/B")
          PF =st.number_input("Percolation feature")
